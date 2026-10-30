@@ -339,14 +339,14 @@
   @media (min-width: 1024px) and (max-height: 820px) { .hero-facts { display: none; } }
 
   /* Portrait: cut-out photo inside a full-height soft blue panel */
-  .portrait { position: relative; aspect-ratio: 900 / 1010; width: min(100%, 360px); margin-inline: auto; isolation: isolate; }
+  .portrait { position: relative; aspect-ratio: 900 / 1250; width: min(100%, 360px); margin-inline: auto; isolation: isolate; }
   @media (min-width: 640px) { .portrait { width: min(100%, 420px); } }
   @media (min-width: 1024px) { .portrait { width: auto; height: min(60svh, 620px); margin-right: 0; } }
   @media (min-width: 1024px) and (min-height: 960px) { .portrait { height: min(68svh, 760px); } }
   .p-panel { position: absolute; inset: 0; height: 100%; border-radius: 36px; overflow: hidden; z-index: 0;
     background: linear-gradient(165deg, #EEF4FA 0%, #D8E5F2 100%); animation: panelIn .9s cubic-bezier(.2,.8,.2,1) both; }
   .p-panel::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(rgba(14,42,71,.10) 1.2px, transparent 1.3px); background-size: 18px 18px; -webkit-mask-image: linear-gradient(to bottom, #000 0%, transparent 70%); mask-image: linear-gradient(to bottom, #000 0%, transparent 70%); }
-  .p-img { position: absolute; z-index: 2; left: 50%; bottom: 0; width: 88%; height: auto; transform: translateX(-50%); -webkit-mask-image: linear-gradient(to bottom, #000 88%, transparent 100%); mask-image: linear-gradient(to bottom, #000 88%, transparent 100%); animation: photoUp 1s cubic-bezier(.2,.8,.2,1) .2s both; }
+  .p-img { position: absolute; z-index: 2; left: 50%; bottom: 0; width: 90%; height: auto; transform: translateX(-50%); -webkit-mask-image: linear-gradient(to bottom, #000 88%, transparent 100%); mask-image: linear-gradient(to bottom, #000 88%, transparent 100%); animation: photoUp 1s cubic-bezier(.2,.8,.2,1) .2s both; }
   .p-caption { position: absolute; z-index: 3; left: 14px; right: 14px; bottom: 14px; display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-radius: 20px; background: rgba(255,255,255,.88); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); box-shadow: 0 14px 30px -18px rgba(14,42,71,.5); animation: fadeUp .7s ease 1s both; }
   .p-caption-icon { width: 38px; height: 38px; flex: none; border-radius: 12px; display: grid; place-items: center; background: var(--heart); color: #fff; }
   @keyframes panelIn { from { opacity: 0; transform: translateY(24px) scale(.97); } to { opacity: 1; transform: none; } }
@@ -425,6 +425,7 @@
   @media (min-width: 768px) { .gallery-grid { columns: 3; column-gap: 16px; } }
   .gallery-grid > * { break-inside: avoid; margin-bottom: 12px; display: block; width: 100%; }
   @media (min-width: 768px) { .gallery-grid > * { margin-bottom: 16px; } }
+  @media (max-width: 767px) { .gallery-tile { column-span: all; } }
 
   /* Heart beat on the logo mark */
   @keyframes beat { 0%, 100% { transform: scale(1); } 14% { transform: scale(1.18); } 28% { transform: scale(1); } 42% { transform: scale(1.12); } 70% { transform: scale(1); } }
@@ -528,7 +529,7 @@
         <div class="order-1 lg:order-2 min-w-0 flex lg:justify-end">
           <div class="portrait">
             <div class="p-panel" aria-hidden="true"></div>
-            <img src="assets/img/dr-akif-ahamad-baig-cardiologist.webp" width="900" height="1010" alt="Dr. Akif Ahamad Baig in a white coat with a stethoscope, arms crossed" class="p-img" fetchpriority="high">
+            <img src="assets/img/dr-akif-ahamad-baig-cardiologist.webp" width="900" height="1220" alt="Dr. Akif Ahamad Baig, Consultant Interventional Cardiologist, in a white coat with a stethoscope" class="p-img" fetchpriority="high">
             <div class="p-caption">
               <span class="p-caption-icon" aria-hidden="true"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 3h5v6.5H21v5h-6.5V21h-5v-6.5H3v-5h6.5Z"/></svg></span>
               <span class="min-w-0 leading-tight">
@@ -590,9 +591,9 @@
   <div class="gutter">
     <div class="wrap py-16 md:py-24 grid lg:grid-cols-[.85fr_1.15fr] gap-10 lg:gap-16">
       <figure class="relative max-w-[440px] mx-auto lg:mx-0 w-full self-start">
-        <img src="assets/img/mumbai.webp" width="800" height="1200" loading="lazy" alt="Dr. Akif in Mumbai, where he trained in General Medicine" class="w-full rounded-[24px] object-cover aspect-[4/5] shadow-lift">
+        <img src="assets/img/dr-akif-cath-lab.webp" width="900" height="1350" loading="lazy" alt="Dr. Akif Ahamad Baig, cardiologist in Guntur" class="w-full rounded-[24px] object-cover object-top aspect-[4/5] shadow-lift">
         <figcaption class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur rounded-xl px-4 py-3 text-sm">
-          <span class="font-bold">Mumbai.</span> <span class="text-ink-500">Three years of General Medicine at P. D. Hinduja National Hospital.</span>
+          <span class="font-bold">Dr. Akif Ahamad Baig.</span> <span class="text-ink-500">MBBS, DNB (General Medicine), DM (Cardiology).</span>
         </figcaption>
       </figure>
 
@@ -695,7 +696,7 @@
       <div class="min-w-0 lg:sticky lg:top-28">
         <h2 class="font-display font-semibold text-[32px] sm:text-[44px] leading-[1.1] tracking-[-0.01em]">What he treats</h2>
         <p class="mt-4 text-[17px] text-ink-500 max-w-[48ch]">From a first ECG to a complex stent, these are the tests and procedures he does. Tap any one to see what it means for a patient.</p>
-        <img src="assets/img/clinic-arms.webp" width="900" height="1488" loading="lazy" alt="Dr. Akif in scrubs and a surgical cap, arms crossed" class="hidden lg:block mt-8 w-[78%] rounded-[24px] object-cover aspect-[4/5] object-top shadow-lift">
+        <img src="assets/img/hero-portrait.webp" width="900" height="1125" loading="lazy" alt="Dr. Akif Ahamad Baig in a white coat with a stethoscope" class="hidden lg:block mt-8 w-[78%] rounded-[24px] object-cover aspect-[4/5] object-top shadow-lift">
       </div>
 
       <div class="min-w-0 grid gap-3" id="expertiseList">
@@ -806,7 +807,7 @@
 
       <!-- Lead card -->
       <div class="mt-10 grid md:grid-cols-[280px_1fr] gap-6 bg-white rounded-[24px] p-4 sm:p-5 items-center">
-        <img src="assets/img/full-length.webp" width="900" height="1440" loading="lazy" alt="Dr. Akif standing in scrubs and a white coat" class="w-full h-[300px] md:h-[320px] object-cover object-top rounded-[18px] bg-mist">
+        <img src="assets/img/mumbai.webp" width="800" height="1200" loading="lazy" alt="Dr. Akif Ahamad Baig in a white coat" class="w-full h-[300px] md:h-[320px] object-cover object-top rounded-[18px] bg-mist">
         <div class="min-w-0 p-1 sm:p-3">
           <div class="text-sm font-bold text-heart">Founder and head</div>
           <div class="font-display text-3xl font-semibold mt-1">Dr. Akif Ahamad Baig</div>

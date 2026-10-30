@@ -16,6 +16,9 @@ const CONFIG = {
   altPhoneDisplay: '+91 93817 40718',
   altPhoneTel: '+919381740718',
   whatsapp: '919381740718',          // country code + number, no "+" or spaces
+  // Visit counter: same endpoint the Flutter apps use
+  trackVisitApi: 'https://api.chandus7.in/api/track-visit/',
+  appName: 'Dr Akif Website',
   // Django endpoint that saves appointment requests (see backend/ folder)
   bookingApi: 'https://api.chandus7.in/api/akif/appointments/',
   mapUrl: 'https://www.google.com/maps/search/?api=1&query=Aaira+Heart+%26+Polyclinic+Anandapet+Ponnur+Road+Guntur',
@@ -74,7 +77,7 @@ const VENTURES = [
       { name: 'Dr. Sheikh Reshma', role: 'MD, Pulmonology' },
     ],
     clinic: true,
-    photo: 'assets/img/clinic-arms.webp',
+    photo: 'assets/img/dr-akif-cath-lab.webp',
   },
   {
     id: 'infumedz',
@@ -247,12 +250,9 @@ const TEAM = [
 //   { src: 'assets/img/aaira-reception.webp', w: 1200, h: 900, cap: 'Reception, Aaira Heart & Polyclinic' },
 // To remove a photo from the gallery: delete its line (or put // in front of it).
 const GALLERY = [
-  { src: 'assets/img/hero-portrait.webp', w: 900, h: 1125, cap: 'Studio portrait' },                  // 1
-  { src: 'assets/img/clinic-arms.webp', w: 900, h: 1488, cap: 'Ready for the cath lab' },            // 2
-  { src: 'assets/img/mumbai.webp', w: 800, h: 1200, cap: 'Mumbai, during his DNB years' },           // 3
-  { src: 'assets/img/og-banner.webp', w: 1200, h: 900, cap: 'Consultant Interventional Cardiologist' }, // 4
-  { src: 'assets/img/clinic-smile.webp', w: 900, h: 1488, cap: 'At the clinic' },                    // 5
-  { src: 'assets/img/full-length.webp', w: 900, h: 1440, cap: 'Between rounds' },                    // 6
+  { src: 'assets/img/mumbai.webp', w: 800, h: 1200, cap: 'Mumbai, during his DNB years' },        // 1
+  { src: 'assets/img/dr-akif-cath-lab.webp', w: 900, h: 1350, cap: 'Ready for the cath lab' },   // 2
+  { src: 'assets/img/hero-portrait.webp', w: 900, h: 1125, cap: 'Studio portrait' },             // 3
 ];
 
 /* ---------------------------------------------------------------------
@@ -263,6 +263,27 @@ const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const isExternal = (href) => /^https?:/.test(href);
+
+
+/* ---------------------------------------------------------------------
+   VISIT TRACKING: one POST each time the website opens
+   (same as trackAppVisit() in the Flutter apps)
+   --------------------------------------------------------------------- */
+(function trackVisit() {
+  if (!/^https?:$/.test(location.protocol)) return;          // skip file:// tests
+  if (/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) return; // skip local tests
+  try {
+    const ctrl = 'AbortController' in window ? new AbortController() : null;
+    if (ctrl) setTimeout(() => ctrl.abort(), 10000);          // 10 s timeout
+    fetch(CONFIG.trackVisitApi, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ app_name: CONFIG.appName }),
+      keepalive: true,
+      signal: ctrl ? ctrl.signal : undefined,
+    }).catch(() => {});
+  } catch (_) { /* never break the page */ }
+})();
 
 /* ---------------------------------------------------------------------
    HEADER: mobile menu + active section
@@ -846,7 +867,7 @@ const isExternal = (href) => /^https?:/.test(href);
 (function gallery() {
   const grid = $('#galleryGrid');
   const clinicTile = `
-    <div class="relative overflow-hidden rounded-2xl bg-ink text-white p-6 sm:p-7">
+    <div class="gallery-tile relative overflow-hidden rounded-2xl bg-ink text-white p-6 sm:p-7">
       <div class="absolute -right-10 -top-10 w-40 h-40 rounded-full border-[18px] border-heart/40" aria-hidden="true"></div>
       <div class="relative">
         <div class="text-sm font-bold text-[#F3A6B2]">The clinic</div>
@@ -858,6 +879,9 @@ const isExternal = (href) => /^https?:/.test(href);
         </div>
       </div>
     </div>`;
+  const total = GALLERY.length + 1;
+  grid.style.columns = window.matchMedia('(min-width: 768px)').matches ? String(Math.min(3, total)) : (total > 2 ? '2' : '1');
+  if (total <= 3) grid.style.maxWidth = total === 2 ? '820px' : '';
   grid.innerHTML = clinicTile + GALLERY.map((g, i) => `
     <button class="group relative overflow-hidden rounded-2xl bg-mist text-left" data-i="${i}" aria-label="View photo: ${esc(g.cap)}">
       <img src="${g.src}" width="${g.w}" height="${g.h}" loading="lazy" alt="${esc(g.cap)}" class="w-full h-auto block transition-transform duration-500 group-hover:scale-[1.03]">
