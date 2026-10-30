@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <rect width="256" height="256" fill="#fff"/>
+  <!-- blue plus, same rounded-cross style as the Inforedz mark -->
+  <path d="M98 22h60a10 10 0 0 1 10 10v56h56a10 10 0 0 1 10 10v60a10 10 0 0 1-10 10h-56v56a10 10 0 0 1-10 10H98a10 10 0 0 1-10-10v-56H32a10 10 0 0 1-10-10V98a10 10 0 0 1 10-10h56V32a10 10 0 0 1 10-10Z" fill="#1F5FBF"/>
+  <!-- white heart with a pulse line -->
+  <path d="M128 182s-46-27-46-62c0-15 12-27 26-27 9 0 16 4 20 11 4-7 11-11 20-11 14 0 26 12 26 27 0 35-46 62-46 62Z" fill="#fff"/>
+  <path d="M88 128h22l8-16 12 32 10-24 6 8h24" fill="none" stroke="#1F5FBF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

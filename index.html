@@ -1,0 +1,740 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dr. Akif Ahamad Baig</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Dr. Akif Ahamad Baig — Consultant Interventional Cardiologist in Guntur. Founder of Aaira Heart & Polyclinic, InfuMedz, Inforedz and Editor-in-Chief of Clinova.">
+<meta name="theme-color" content="#0E2A47">
+<meta property="og:title" content="Dr. Akif Ahamad Baig — Cardiologist, Educator, Founder">
+<meta property="og:description" content="Consultant Interventional Cardiologist in Guntur. Founder of Aaira Heart & Polyclinic and InfuMedz.">
+<meta property="og:image" content="assets/img/og-banner.jpg">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap">
+
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink:   { DEFAULT: '#0E2A47', 700: '#173A5E', 500: '#4A607A', 300: '#8C9BB0' },
+          heart: { DEFAULT: '#C8102E', 600: '#A50D26', 100: '#FDE8EB', 50: '#FFF5F6' },
+          pulse: { DEFAULT: '#0E8C83', 100: '#DDF3F0' },
+          mist:  { DEFAULT: '#F3F6FA', 200: '#E3E9F1' },
+        },
+        fontFamily: {
+          display: ['Fraunces', 'Georgia', 'Times New Roman', 'serif'],
+          sans: ['Manrope', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
+        },
+        boxShadow: {
+          lift: '0 24px 48px -24px rgba(14,42,71,.28)',
+        },
+      },
+    },
+  };
+</script>
+
+<!-- Search engines: tells Google this is a doctor + clinic -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Physician",
+  "name": "Dr. Akif Ahamad Baig",
+  "medicalSpecialty": "Cardiovascular",
+  "image": "assets/img/hero-portrait.webp",
+  "knowsLanguage": ["English", "Hindi", "Urdu", "Telugu"],
+  "sameAs": ["https://www.youtube.com/@infusionmedz", "https://www.instagram.com/akifahamad/", "https://www.slideshare.net/akifab93"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Door no 17-11-16, Anandapet 10th lane, Ponnur Road, beside Panchavati Apartment",
+    "addressLocality": "Guntur",
+    "addressRegion": "Andhra Pradesh",
+    "postalCode": "522003",
+    "addressCountry": "IN"
+  }
+}
+</script>
+
+<style>
+  /* Layout: a wide column (5% side margins on desktop); the hero portrait arch + venture cards carry the identity. */
+  :root {
+    --paper: #FFFFFF;      /* page */
+    --mist: #F3F6FA;       /* quiet section bands */
+    --line: #E3E9F1;       /* hairlines */
+    --ink: #0E2A47;        /* text + brand navy */
+    --ink-soft: #4A607A;   /* secondary text */
+    --heart: #C8102E;      /* cardiac red, CTAs only */
+    --pulse: #0E8C83;      /* "live" status */
+    color-scheme: light;
+  }
+  html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+  body {
+    background: var(--paper); color: var(--ink);
+    font-family: Manrope, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    font-size: 16px; line-height: 1.65; margin: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+  body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 60; background: rgba(255,255,255,.92); }
+  .gutter { padding-left: max(18px, env(safe-area-inset-left, 0px)); padding-right: max(18px, env(safe-area-inset-right, 0px)); }
+  @media (min-width: 768px) { .gutter { padding-left: max(28px, env(safe-area-inset-left, 0px)); padding-right: max(28px, env(safe-area-inset-right, 0px)); } }
+  @media (min-width: 1024px) { .gutter { padding-left: max(16px, 5vw, env(safe-area-inset-left, 0px)); padding-right: max(16px, 5vw, env(safe-area-inset-right, 0px)); } }
+  .wrap { max-width: 1760px; margin-left: auto; margin-right: auto; }
+  h1, h2, h3 { text-wrap: balance; }
+  .num { font-variant-numeric: tabular-nums; }
+
+  .site-header { top: env(safe-area-inset-top, 0px); }
+  .nav-link { position: relative; color: var(--ink-soft); font-weight: 600; font-size: 15px; padding: 6px 2px; transition: color .2s; }
+  .nav-link:hover, .nav-link.is-active { color: var(--ink); }
+  .nav-link.is-active::after { content: ""; position: absolute; left: 0; right: 0; bottom: -2px; height: 2px; background: var(--heart); border-radius: 2px; }
+
+  :focus-visible { outline: 3px solid var(--heart); outline-offset: 3px; border-radius: 6px; }
+
+  /* ---------- Hero ---------- */
+  .hero-name { font-size: clamp(46px, 6.4vw, 112px); line-height: .98; letter-spacing: -0.025em; }
+  .hero-name .line { display: block; overflow: hidden; padding-bottom: .06em; }
+  .hero-name .line > span { display: inline-block; animation: lineUp .95s cubic-bezier(.2,.8,.2,1) both; }
+  .hero-name .line:nth-child(2) > span { animation-delay: .12s; }
+  .hero-kicker { animation: fadeUp .7s ease both; }
+  .hero-fade { animation: fadeUp .8s ease .35s both; }
+  @keyframes lineUp { from { transform: translateY(105%); } to { transform: none; } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+
+  /* Hero fills exactly one screen on desktop: text + photo on top, venture strip at the bottom */
+  @media (min-width: 1024px) {
+    .hero-fit { min-height: calc(100vh - 68px); min-height: calc(100svh - 68px - env(safe-area-inset-top, 0px)); display: flex; }
+    .hero-name { font-size: clamp(44px, min(6.2vw, 9.2svh), 112px); }
+  }
+  @media (min-width: 1024px) and (max-height: 820px) { .hero-facts { display: none; } }
+
+  /* Portrait: cut-out photo inside a full-height soft blue panel */
+  .portrait { position: relative; aspect-ratio: 900 / 1010; width: min(100%, 360px); margin-inline: auto; isolation: isolate; }
+  @media (min-width: 640px) { .portrait { width: min(100%, 420px); } }
+  @media (min-width: 1024px) { .portrait { width: auto; height: min(60svh, 620px); margin-right: 0; } }
+  @media (min-width: 1024px) and (min-height: 960px) { .portrait { height: min(68svh, 760px); } }
+  .p-panel { position: absolute; inset: 0; height: 100%; border-radius: 36px; overflow: hidden; z-index: 0;
+    background: linear-gradient(165deg, #EEF4FA 0%, #D8E5F2 100%); animation: panelIn .9s cubic-bezier(.2,.8,.2,1) both; }
+  .p-panel::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(rgba(14,42,71,.10) 1.2px, transparent 1.3px); background-size: 18px 18px; -webkit-mask-image: linear-gradient(to bottom, #000 0%, transparent 70%); mask-image: linear-gradient(to bottom, #000 0%, transparent 70%); }
+  .p-img { position: absolute; z-index: 2; left: 50%; bottom: 0; width: 88%; height: auto; transform: translateX(-50%); -webkit-mask-image: linear-gradient(to bottom, #000 88%, transparent 100%); mask-image: linear-gradient(to bottom, #000 88%, transparent 100%); animation: photoUp 1s cubic-bezier(.2,.8,.2,1) .2s both; }
+  .p-caption { position: absolute; z-index: 3; left: 14px; right: 14px; bottom: 14px; display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-radius: 20px; background: rgba(255,255,255,.88); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); box-shadow: 0 14px 30px -18px rgba(14,42,71,.5); animation: fadeUp .7s ease 1s both; }
+  .p-caption-icon { width: 38px; height: 38px; flex: none; border-radius: 12px; display: grid; place-items: center; background: var(--heart); color: #fff; }
+  @keyframes panelIn { from { opacity: 0; transform: translateY(24px) scale(.97); } to { opacity: 1; transform: none; } }
+  @keyframes photoUp { from { opacity: 0; transform: translate(-50%, 36px); } to { opacity: 1; transform: translate(-50%, 0); } }
+
+  /* ---------- Venture cards (slim strip in the hero) ---------- */
+  .venture-row { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(240px, 74%); gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 2px 10px; scrollbar-width: none; }
+  .venture-row::-webkit-scrollbar { display: none; }
+  @media (min-width: 640px) { .venture-row { grid-auto-columns: minmax(240px, 40%); } }
+  @media (min-width: 1100px) { .venture-row { grid-auto-columns: calc((100% - 4 * 14px) / 5.35); gap: 14px; padding-bottom: 6px; } }
+  .vrow-wrap { position: relative; }
+  .vrow-wrap::before, .vrow-wrap::after { content: ""; position: absolute; top: 0; bottom: 10px; width: 36px; z-index: 2; pointer-events: none; transition: opacity .3s; }
+  .vrow-wrap::before { left: 0; background: linear-gradient(90deg, var(--paper), transparent); opacity: 0; }
+  .vrow-wrap::after { right: 0; background: linear-gradient(-90deg, var(--paper), transparent); }
+  .vrow-wrap.at-start::before { opacity: 0; } .vrow-wrap:not(.at-start)::before { opacity: 1; }
+  .vrow-wrap.at-end::after { opacity: 0; }
+  .vrow-btn { width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; border: 1px solid var(--line); background: #fff; color: var(--ink); transition: background .2s, color .2s, opacity .2s; }
+  .vrow-btn:hover { background: var(--ink); color: #fff; }
+  .vrow-btn:disabled { opacity: .35; pointer-events: none; }
+  .vrow-dots { display: flex; gap: 6px; }
+  .vrow-dots span { width: 6px; height: 6px; border-radius: 99px; background: var(--line); transition: width .3s, background .3s; }
+  .vrow-dots span.on { width: 18px; background: var(--heart); }
+
+  /* ---------- Media ---------- */
+  .media-card { position: relative; display: block; width: 100%; overflow: hidden; border-radius: 20px; background: var(--ink); text-align: left; }
+  .media-card img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s cubic-bezier(.2,.8,.2,1), opacity .3s; }
+  .media-card:hover img { transform: scale(1.04); opacity: .9; }
+  .media-play { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; background: rgba(255,255,255,.95); color: var(--heart); box-shadow: 0 12px 30px -10px rgba(0,0,0,.5); transition: transform .3s; }
+  .media-card:hover .media-play { transform: translate(-50%, -50%) scale(1.08); }
+  .media-play::after { content: ""; position: absolute; inset: -8px; border-radius: 50%; border: 2px solid rgba(255,255,255,.7); animation: ring2 2.4s ease-out infinite; }
+  @keyframes ring2 { 0% { transform: scale(.85); opacity: .9; } 100% { transform: scale(1.35); opacity: 0; } }
+  .media-tag { position: absolute; left: 12px; top: 12px; display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: 99px; font-size: 12px; font-weight: 700; color: #fff; }
+  .social-card { display: flex; align-items: center; gap: 14px; padding: 16px; border-radius: 20px; background: #fff; border: 1px solid var(--line); transition: border-color .2s, transform .25s; min-width: 0; }
+  .social-card:hover { border-color: var(--ink); transform: translateY(-2px); }
+  .social-ico { width: 48px; height: 48px; flex: none; border-radius: 14px; display: grid; place-items: center; color: #fff; }
+
+  .vcard { --vc: #0E2A47; position: relative; overflow: hidden; isolation: isolate; display: flex; align-items: center; gap: 12px; min-height: 82px; padding: 12px 12px 12px 14px; border-radius: 18px; background: #fff; border: 1px solid var(--line); color: var(--ink); scroll-snap-align: start; transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s, color .3s, border-color .3s; animation: fadeUp .6s ease both; animation-delay: calc(.6s + var(--i, 0) * .07s); }
+  .vcard::before { content: ""; position: absolute; inset: 0; z-index: -1; background: var(--vc); clip-path: circle(0% at 0% 50%); transition: clip-path .5s cubic-bezier(.2,.8,.2,1); }
+  .vcard:hover, .vcard:focus-visible { color: #fff; border-color: var(--vc); transform: translateY(-3px); box-shadow: 0 18px 30px -20px var(--vc); }
+  .vcard:hover::before, .vcard:focus-visible::before { clip-path: circle(160% at 0% 50%); }
+  .vc-sub { color: var(--ink-soft); transition: color .3s; }
+  .vcard:hover .vc-sub, .vcard:focus-visible .vc-sub { color: rgba(255,255,255,.85); }
+  .vc-mono { background: var(--vc); color: #fff; transition: background .3s, color .3s; }
+  .vcard:hover .vc-mono, .vcard:focus-visible .vc-mono { background: #fff; color: var(--vc); }
+  @media (min-width: 1100px) and (max-width: 1439px) { .vcard .vc-go { display: none; } .vcard { gap: 10px; padding-left: 12px; } }
+  .vc-go { margin-left: auto; flex: none; width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; background: var(--mist); color: var(--ink); transition: transform .35s, background .3s; }
+  .vcard:hover .vc-go, .vcard:focus-visible .vc-go { background: #fff; color: var(--vc); transform: rotate(-45deg); }
+
+  /* Ventures section (tabs) */
+  .venture-tab[aria-selected="true"] { background: #fff; color: var(--ink); border-color: #fff; }
+  .venture-tab[aria-selected="true"] .tab-sub { color: var(--ink-soft); }
+  .venture-panel { animation: fadeUp .35s ease both; }
+
+  /* ---------- Venture full page ---------- */
+  .vpage { padding-top: env(safe-area-inset-top, 0px); }
+  .vpage.is-open #vpInner { animation: vpIn .55s cubic-bezier(.2,.8,.2,1) both; }
+  @keyframes vpIn { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: none; } }
+  .vp-bar { position: sticky; top: 0; z-index: 5; }
+  .store-btn { display: inline-flex; align-items: center; gap: 12px; padding: 10px 18px 10px 14px; border-radius: 14px; background: #0B1F35; color: #fff; min-width: 210px; transition: transform .2s, background .2s; }
+  .store-btn:hover { transform: translateY(-2px); background: #000; }
+  .store-btn.is-soon { background: rgba(255,255,255,.14); color: rgba(255,255,255,.85); border: 1.5px dashed rgba(255,255,255,.45); cursor: default; }
+  .store-btn.is-soon:hover { transform: none; }
+  .store-btn.is-soon.on-light { background: var(--mist); color: var(--ink-soft); border-color: rgba(14,42,71,.25); }
+  .store-btn.is-light { background: #fff; color: #0B1F35; }
+  .store-btn.is-light:hover { background: #F3F6FA; }
+
+  /* Expertise disclosure */
+  .exp-item[open] summary .exp-plus { transform: rotate(45deg); background: var(--heart); color: #fff; }
+  .exp-item summary::-webkit-details-marker { display: none; }
+
+  /* Team filter chips */
+  .chip[aria-pressed="true"] { background: var(--ink); color: #fff; border-color: var(--ink); }
+
+  /* Gallery */
+  .gallery-grid { columns: 2; column-gap: 12px; }
+  @media (min-width: 768px) { .gallery-grid { columns: 3; column-gap: 16px; } }
+  .gallery-grid > * { break-inside: avoid; margin-bottom: 12px; display: block; width: 100%; }
+  @media (min-width: 768px) { .gallery-grid > * { margin-bottom: 16px; } }
+
+  /* Heart beat on the logo mark */
+  @keyframes beat { 0%, 100% { transform: scale(1); } 14% { transform: scale(1.18); } 28% { transform: scale(1); } 42% { transform: scale(1.12); } 70% { transform: scale(1); } }
+  .beat { animation: beat 1.4s ease-in-out infinite; transform-origin: center; }
+
+  .mobile-bar { padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px)); padding-left: max(12px, env(safe-area-inset-left, 0px)); padding-right: max(12px, env(safe-area-inset-right, 0px)); }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  }
+</style>
+</head>
+
+<body class="bg-white text-ink">
+
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[80] focus:bg-ink focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">Skip to content</a>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header sticky z-50 bg-white/90 backdrop-blur border-b border-mist-200">
+  <div class="gutter">
+    <div class="wrap h-[68px] flex items-center justify-between gap-4">
+      <a href="#top" class="flex items-center gap-3 min-w-0" aria-label="Dr. Akif Ahamad Baig, home">
+        <svg class="w-9 h-9 shrink-0" viewBox="0 0 40 40" aria-hidden="true">
+          <rect width="40" height="40" rx="11" fill="#0E2A47"/>
+          <path class="beat" d="M20 30s-9-5.6-9-12.2A5 5 0 0 1 20 15a5 5 0 0 1 9 2.8C29 24.4 20 30 20 30Z" fill="#C8102E"/>
+          <path d="M8 21h6l2-4 3 8 3-11 2 7h8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="leading-tight min-w-0">
+          <span class="block font-display font-semibold text-[17px] truncate">Dr. Akif Ahamad Baig</span>
+          <span class="block text-[12px] text-ink-500 font-semibold truncate">Cardiologist, Guntur</span>
+        </span>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-7" aria-label="Main">
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#expertise">Expertise</a>
+        <a class="nav-link" href="#ventures">Ventures</a>
+        <a class="nav-link" href="#teaching">Teaching</a>
+        <a class="nav-link" href="#media">Media</a>
+        <a class="nav-link" href="#team">Team</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <a href="#contact" class="hidden sm:inline-flex items-center gap-2 bg-heart hover:bg-heart-600 text-white font-bold text-sm px-4 py-2.5 rounded-full transition-colors">Book a visit</a>
+        <button id="menuBtn" class="lg:hidden w-11 h-11 grid place-items-center rounded-xl border border-mist-200" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="lg:hidden border-t border-mist-200 bg-white" hidden>
+    <nav class="gutter py-3 grid gap-1" aria-label="Mobile">
+      <a class="mm-link py-3 px-2 rounded-lg font-semibold hover:bg-mist" href="#about">About</a>
+      <a class="mm-link py-3 px-2 rounded-lg font-semibold hover:bg-mist" href="#expertise">Expertise</a>
+      <a class="mm-link py-3 px-2 rounded-lg font-semibold hover:bg-mist" href="#ventures">Ventures</a>
+      <a class="mm-link py-3 px-2 rounded-lg font-semibold hover:bg-mist" href="#teaching">Teaching</a>
+      <a class="mm-link py-3 px-2 rounded-lg font-semibold hover:bg-mist" href="#media">Media</a>
+      <a class="mm-link py-3 px-2 rounded-lg font-semibold hover:bg-mist" href="#team">Team</a>
+      <a class="mm-link py-3 px-2 rounded-lg font-semibold hover:bg-mist" href="#gallery">Gallery</a>
+      <a class="mm-link py-3 px-2 rounded-lg font-semibold hover:bg-mist" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section id="top" class="hero relative overflow-hidden">
+  <div class="gutter hero-fit">
+    <div class="wrap w-full flex flex-col">
+      <div class="flex-1 grid lg:grid-cols-[1.1fr_.9fr] gap-6 lg:gap-10 items-center pt-6 lg:pt-4">
+
+        <div class="min-w-0 order-2 lg:order-1">
+          <p class="hero-kicker text-[15px] sm:text-base font-bold text-heart">Consultant Interventional Cardiologist in Guntur</p>
+          <h1 class="hero-name font-display font-semibold text-ink mt-3">
+            <span class="line"><span>Dr. Akif</span></span>
+            <span class="line"><span>Ahamad Baig</span></span>
+          </h1>
+          <p class="hero-fade mt-3 text-[15px] sm:text-base font-bold text-ink-500">MBBS, DNB (General Medicine), DM (Cardiology)</p>
+          <p class="hero-fade mt-3 max-w-[54ch] text-[17px] text-ink-500">
+            He treats heart disease at his own clinic in Guntur, teaches cardiology to young doctors across India, and builds platforms for learning, research and patient care.
+          </p>
+          <div class="hero-fade mt-6 flex flex-wrap gap-3">
+            <a href="#contact" class="inline-flex items-center gap-2 bg-heart hover:bg-heart-600 text-white font-bold px-6 py-3.5 rounded-full transition-colors">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>
+              Book an appointment
+            </a>
+            <a href="#about" class="inline-flex items-center gap-2 border-2 border-ink/80 text-ink font-bold px-6 py-3 rounded-full hover:bg-ink hover:text-white transition-colors">About him</a>
+          </div>
+          <dl class="hero-facts hero-fade mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-0 sm:divide-x divide-ink/10 border-t border-ink/10 pt-5">
+            <div class="sm:pr-5"><dt class="text-[13px] font-bold text-ink-500">Trained at</dt><dd class="font-bold leading-snug mt-0.5">Guntur Medical College</dd></div>
+            <div class="sm:px-5"><dt class="text-[13px] font-bold text-ink-500">Member</dt><dd class="font-bold leading-snug mt-0.5">SCAI, lifetime</dd></div>
+            <div class="sm:pl-5"><dt class="text-[13px] font-bold text-ink-500">Speaks</dt><dd class="font-bold leading-snug mt-0.5">English, Hindi, Urdu, Telugu</dd></div>
+          </dl>
+        </div>
+
+        <!-- Portrait -->
+        <div class="order-1 lg:order-2 min-w-0 flex lg:justify-end">
+          <div class="portrait">
+            <div class="p-panel" aria-hidden="true"></div>
+            <img src="assets/img/hero-cutout.webp" width="900" height="1010" alt="Dr. Akif Ahamad Baig in a white coat with a stethoscope, arms crossed" class="p-img" fetchpriority="high">
+            <div class="p-caption">
+              <span class="p-caption-icon" aria-hidden="true"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 3h5v6.5H21v5h-6.5V21h-5v-6.5H3v-5h6.5Z"/></svg></span>
+              <span class="min-w-0 leading-tight">
+                <span class="block font-bold text-[14px] sm:text-[15px] text-ink truncate">Aaira Heart &amp; Polyclinic</span>
+                <span class="block text-[12.5px] sm:text-[13px] font-semibold text-ink-500 truncate">Founder and lead cardiologist</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slim venture strip: fits the first screen -->
+      <div id="hero-ventures" class="pt-8 lg:pt-5 pb-10 lg:pb-6">
+        <div class="flex items-center justify-between gap-3">
+          <div class="flex items-center gap-4 min-w-0">
+            <h2 class="text-[15px] font-bold text-ink-500 whitespace-nowrap">His ventures</h2>
+            <div class="vrow-dots" id="vrowDots" aria-hidden="true"></div>
+          </div>
+          <div class="flex items-center gap-2 shrink-0">
+            <a href="#ventures" class="text-[14px] font-bold text-heart hover:underline mr-1 hidden sm:inline">View all details</a>
+            <button type="button" class="vrow-btn" id="vrowPrev" aria-label="Previous ventures"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+            <button type="button" class="vrow-btn" id="vrowNext" aria-label="Next ventures"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+          </div>
+        </div>
+        <div class="vrow-wrap at-start mt-3" id="vrowWrap">
+          <div id="ventureRow" class="venture-row" role="list" aria-label="Ventures"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NUMBERS ============ -->
+<section class="bg-ink text-white" aria-label="In numbers">
+  <div class="gutter">
+    <div class="wrap py-10 md:py-12 grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-6">
+      <div class="md:border-r border-white/10">
+        <div class="num font-display text-[38px] sm:text-[48px] font-semibold leading-none"><span data-count="108">108</span></div>
+        <div class="mt-2 text-sm text-[#C7D3E2] font-semibold">Teaching talks published</div>
+      </div>
+      <div class="md:border-r border-white/10 md:pl-6">
+        <div class="num font-display text-[38px] sm:text-[48px] font-semibold leading-none"><span data-count="200">200</span>+</div>
+        <div class="mt-2 text-sm text-[#C7D3E2] font-semibold">Video lectures on InfuMedz</div>
+      </div>
+      <div class="md:border-r border-white/10 md:pl-6">
+        <div class="num font-display text-[38px] sm:text-[48px] font-semibold leading-none"><span data-count="5000" data-format="k">5K</span>+</div>
+        <div class="mt-2 text-sm text-[#C7D3E2] font-semibold">Medical students learning</div>
+      </div>
+      <div class="md:pl-6">
+        <div class="num font-display text-[38px] sm:text-[48px] font-semibold leading-none"><span data-count="7">7</span></div>
+        <div class="mt-2 text-sm text-[#C7D3E2] font-semibold">Ventures founded</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT + JOURNEY ============ -->
+<section id="about" class="bg-mist">
+  <div class="gutter">
+    <div class="wrap py-16 md:py-24 grid lg:grid-cols-[.85fr_1.15fr] gap-10 lg:gap-16">
+      <figure class="relative max-w-[440px] mx-auto lg:mx-0 w-full">
+        <img src="assets/img/mumbai.webp" width="800" height="1200" loading="lazy" alt="Dr. Akif in Mumbai, where he trained in General Medicine" class="w-full rounded-[24px] object-cover aspect-[4/5] shadow-lift">
+        <figcaption class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur rounded-xl px-4 py-3 text-sm">
+          <span class="font-bold">Mumbai.</span> <span class="text-ink-500">Three years of General Medicine at P. D. Hinduja National Hospital.</span>
+        </figcaption>
+      </figure>
+
+      <div class="min-w-0">
+        <h2 class="font-display font-semibold text-[32px] sm:text-[44px] leading-[1.1] tracking-[-0.01em]">A cardiologist who also builds</h2>
+        <div class="mt-5 space-y-4 text-[17px] text-ink-500 max-w-[62ch]">
+          <p>Dr. Akif trained in Vijayawada, Mumbai and Guntur, and now works as a consultant cardiologist in Guntur. His daily work is in the cath lab and the clinic: angiograms, angioplasties, pacemakers and echocardiography.</p>
+          <p>Outside the clinic, he teaches. His lectures help DM, DrNB, MD and MBBS students learn cardiology for the ward, not just the exam. That teaching grew into a set of platforms for learning, research, blood donation and hospital care.</p>
+        </div>
+
+        <h3 class="mt-10 font-bold text-ink text-lg">His path so far</h3>
+        <ol class="mt-5 relative border-l-2 border-mist-200 ml-2 space-y-6" id="timeline">
+          <li class="pl-6 relative">
+            <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white border-[3px] border-heart"></span>
+            <div class="font-bold">MBBS</div>
+            <div class="text-ink-500 text-[15px]">Siddhartha Medical College, Vijayawada</div>
+          </li>
+          <li class="pl-6 relative">
+            <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white border-[3px] border-heart"></span>
+            <div class="font-bold">DNB, General Medicine</div>
+            <div class="text-ink-500 text-[15px]">P. D. Hinduja National Hospital, Mumbai</div>
+          </li>
+          <li class="pl-6 relative">
+            <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white border-[3px] border-heart"></span>
+            <div class="font-bold">DM, Cardiology</div>
+            <div class="text-ink-500 text-[15px]">Guntur Medical College. Thesis selected in the top 10 for the A. V. Gandhi National Award.</div>
+          </li>
+          <li class="pl-6 relative">
+            <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white border-[3px] border-heart"></span>
+            <div class="font-bold">Consultant Cardiologist</div>
+            <div class="text-ink-500 text-[15px]">Aster Ramesh Hospital, Guntur</div>
+          </li>
+          <li class="pl-6 relative">
+            <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-heart border-[3px] border-heart"></span>
+            <div class="font-bold">Founder</div>
+            <div class="text-ink-500 text-[15px]">Aaira Heart &amp; Polyclinic, Beat N Breath, InfuMedz, Inforedz, Clinova, RESERZ and InfoMedz</div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERTISE ============ -->
+<section id="expertise">
+  <div class="gutter">
+    <div class="wrap py-16 md:py-24 grid lg:grid-cols-[1fr_1.2fr] gap-10 lg:gap-16 items-start">
+      <div class="min-w-0 lg:sticky lg:top-28">
+        <h2 class="font-display font-semibold text-[32px] sm:text-[44px] leading-[1.1] tracking-[-0.01em]">What he treats</h2>
+        <p class="mt-4 text-[17px] text-ink-500 max-w-[48ch]">From a first ECG to a complex stent, these are the tests and procedures he does. Tap any one to see what it means for a patient.</p>
+        <img src="assets/img/clinic-arms.webp" width="900" height="1488" loading="lazy" alt="Dr. Akif in scrubs and a surgical cap, arms crossed" class="hidden lg:block mt-8 w-[78%] rounded-[24px] object-cover aspect-[4/5] object-top shadow-lift">
+      </div>
+
+      <div class="min-w-0 grid gap-3" id="expertiseList">
+        <!-- Filled by main.js from EXPERTISE -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VENTURES ============ -->
+<section id="ventures" class="bg-ink text-white">
+  <div class="gutter">
+    <div class="wrap py-16 md:py-24">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div>
+          <h2 class="font-display font-semibold text-[32px] sm:text-[44px] leading-[1.1] tracking-[-0.01em]">Ventures</h2>
+          <p class="mt-4 text-[17px] text-[#C7D3E2] max-w-[56ch]">Each one fixes a gap he saw as a doctor and a teacher: where patients get care, how students learn, how blood reaches people in time, and how research gets published.</p>
+        </div>
+        <div class="flex gap-4 text-sm font-semibold text-[#C7D3E2]">
+          <span class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-[#3BD1C3]"></span>Live</span>
+          <span class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-[#F5B841]"></span>In development</span>
+        </div>
+      </div>
+      <div class="mt-10 grid lg:grid-cols-[320px_1fr] gap-6">
+        <div role="tablist" aria-label="Ventures" id="ventureTabs" class="flex lg:flex-col gap-2 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0 -mx-1 px-1 snap-x"></div>
+        <div id="venturePanel" class="min-w-0 bg-white text-ink rounded-[24px] p-5 sm:p-8" role="tabpanel"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TEACHING ============ -->
+<section id="teaching">
+  <div class="gutter">
+    <div class="wrap py-16 md:py-24">
+      <div class="grid lg:grid-cols-[1fr_1fr] gap-10 lg:gap-16">
+        <div class="min-w-0">
+          <h2 class="font-display font-semibold text-[32px] sm:text-[44px] leading-[1.1] tracking-[-0.01em]">Teaching that travels</h2>
+          <p class="mt-4 text-[17px] text-ink-500 max-w-[52ch]">He has published 108 teaching slide decks for students and residents. These are the most viewed.</p>
+
+          <div class="mt-8 grid gap-4" id="talkChart" aria-label="Most viewed talks by views">
+            <!-- Filled by main.js -->
+          </div>
+          <a href="https://www.slideshare.net/akifab93" target="_blank" rel="noopener" class="mt-6 inline-flex items-center gap-2 font-bold text-heart hover:underline">Open all 108 talks on SlideShare</a>
+        </div>
+
+        <div class="min-w-0 grid gap-4 content-start">
+          <div class="rounded-[24px] bg-mist p-6 sm:p-7">
+            <div class="text-sm font-bold text-ink-500">Journal</div>
+            <div class="mt-1 font-display text-2xl font-semibold">Editor-in-Chief, Clinova</div>
+            <p class="mt-2 text-ink-500">An open-access, peer-reviewed journal of clinical and health sciences, published quarterly. ISSN (Online) 2984-7310.</p>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="rounded-[24px] border border-mist-200 p-6">
+              <div class="text-sm font-bold text-ink-500">Membership</div>
+              <div class="mt-1 font-bold text-lg leading-snug">Lifetime member, Society for Cardiovascular Angiography and Interventions</div>
+            </div>
+            <div class="rounded-[24px] border border-mist-200 p-6">
+              <div class="text-sm font-bold text-ink-500">Recognition</div>
+              <div class="mt-1 font-bold text-lg leading-snug">Top 10 cardiology thesis, A. V. Gandhi National Award</div>
+            </div>
+          </div>
+          <div class="rounded-[24px] overflow-hidden relative">
+            <img src="assets/img/clinic-smile.webp" width="900" height="1488" loading="lazy" alt="Dr. Akif smiling in a white coat" class="w-full h-[260px] object-cover object-[50%_18%]">
+            <div class="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/20 to-transparent"></div>
+            <p class="absolute bottom-5 left-5 right-5 text-white"><span class="block font-display text-xl sm:text-2xl leading-snug">Cardiology, taught for the ward.</span><span class="block text-sm font-semibold text-white/80 mt-1">The idea behind every InfuMedz course</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MEDIA ============ -->
+<section id="media">
+  <div class="gutter">
+    <div class="wrap py-16 md:py-24">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div>
+          <h2 class="font-display font-semibold text-[32px] sm:text-[44px] leading-[1.1] tracking-[-0.01em]">Watch and follow</h2>
+          <p class="mt-4 text-[17px] text-ink-500 max-w-[56ch]">ECG and clinical lectures on YouTube, and lighter moments from the clinic on Instagram. Tap a video to play it here.</p>
+        </div>
+      </div>
+
+      <div id="socialGrid" class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3"></div>
+
+      <div id="mediaGrid" class="mt-6 grid grid-cols-2 lg:grid-cols-12 gap-4 items-start"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TEAM ============ -->
+<section id="team" class="bg-mist">
+  <div class="gutter">
+    <div class="wrap py-16 md:py-24">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div>
+          <h2 class="font-display font-semibold text-[32px] sm:text-[44px] leading-[1.1] tracking-[-0.01em]">The team behind the work</h2>
+          <p class="mt-4 text-[17px] text-ink-500 max-w-[56ch]">Doctors, nurses, editors and staff who run the clinic and the platforms every day.</p>
+        </div>
+        <div class="flex flex-wrap gap-2" role="group" aria-label="Filter team" id="teamFilters">
+          <button class="chip border border-ink/20 rounded-full px-4 py-2 text-sm font-bold" aria-pressed="true" data-filter="all">Everyone</button>
+          <button class="chip border border-ink/20 rounded-full px-4 py-2 text-sm font-bold" aria-pressed="false" data-filter="clinic">Clinic</button>
+          <button class="chip border border-ink/20 rounded-full px-4 py-2 text-sm font-bold" aria-pressed="false" data-filter="academic">Academic</button>
+          <button class="chip border border-ink/20 rounded-full px-4 py-2 text-sm font-bold" aria-pressed="false" data-filter="ops">Operations</button>
+        </div>
+      </div>
+
+      <!-- Lead card -->
+      <div class="mt-10 grid md:grid-cols-[280px_1fr] gap-6 bg-white rounded-[24px] p-4 sm:p-5 items-center">
+        <img src="assets/img/full-length.webp" width="900" height="1440" loading="lazy" alt="Dr. Akif standing in scrubs and a white coat" class="w-full h-[300px] md:h-[320px] object-cover object-top rounded-[18px] bg-mist">
+        <div class="min-w-0 p-1 sm:p-3">
+          <div class="text-sm font-bold text-heart">Founder and head</div>
+          <div class="font-display text-3xl font-semibold mt-1">Dr. Akif Ahamad Baig</div>
+          <p class="mt-2 text-ink-500 max-w-[60ch]">Leads clinical care at Aaira Heart &amp; Polyclinic, sets the curriculum on InfuMedz, edits Clinova, and guides the product team building InfoMedz.</p>
+          <div class="mt-4 flex flex-wrap gap-2 text-[13px] font-bold">
+            <span class="bg-heart-50 text-heart-600 rounded-full px-3 py-1">Cardiology</span>
+            <span class="bg-pulse-100 text-pulse rounded-full px-3 py-1">Medical education</span>
+            <span class="bg-mist text-ink rounded-full px-3 py-1">Health tech</span>
+          </div>
+        </div>
+      </div>
+
+      <ul id="teamGrid" class="mt-6 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+        <!-- Filled by main.js from TEAM -->
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section id="gallery">
+  <div class="gutter">
+    <div class="wrap py-16 md:py-24">
+      <h2 class="font-display font-semibold text-[32px] sm:text-[44px] leading-[1.1] tracking-[-0.01em]">Gallery</h2>
+      <p class="mt-4 text-[17px] text-ink-500 max-w-[52ch]">Moments from the clinic, the classroom and the road. Tap a photo to view it full size.</p>
+      <div class="gallery-grid mt-8" id="galleryGrid">
+        <!-- Filled by main.js from GALLERY -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="bg-mist">
+  <div class="gutter">
+    <div class="wrap py-16 md:py-24 grid lg:grid-cols-2 gap-10 lg:gap-14">
+      <div class="min-w-0">
+        <h2 class="font-display font-semibold text-[32px] sm:text-[44px] leading-[1.1] tracking-[-0.01em]">Visit Aaira Heart &amp; Polyclinic</h2>
+        <p class="mt-4 text-[17px] text-ink-500 max-w-[50ch]">Book a heart check-up, a follow-up, a second opinion or cardiac rehab. Send your details and the clinic will call you to confirm a time.</p>
+
+        <dl class="mt-8 grid gap-5">
+          <div class="flex gap-4">
+            <dt class="shrink-0 w-11 h-11 rounded-xl bg-white grid place-items-center" aria-label="Address">
+              <svg class="w-5 h-5 text-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+            </dt>
+            <dd class="min-w-0">
+              <div class="font-bold">Address</div>
+              <div class="text-ink-500">Door no 17-11-16, Anandapet 10th Lane, Ponnur Road, beside Panchavati Apartment, Guntur, Andhra Pradesh 522003</div>
+              <a id="mapLink" href="#" target="_blank" rel="noopener" class="mt-1 inline-block font-bold text-heart hover:underline">Get directions</a>
+            </dd>
+          </div>
+          <div class="flex gap-4">
+            <dt class="shrink-0 w-11 h-11 rounded-xl bg-white grid place-items-center" aria-label="Hours">
+              <svg class="w-5 h-5 text-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            </dt>
+            <dd>
+              <div class="font-bold">Clinic hours</div>
+              <div class="text-ink-500" id="hoursText"></div>
+              <div id="openNow" class="mt-1 text-sm font-bold"></div>
+            </dd>
+          </div>
+          <div class="flex gap-4">
+            <dt class="shrink-0 w-11 h-11 rounded-xl bg-white grid place-items-center" aria-label="Phone">
+              <svg class="w-5 h-5 text-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
+            </dt>
+            <dd>
+              <div class="font-bold">Phone and WhatsApp</div>
+              <div class="flex flex-wrap items-center gap-3">
+                <span class="text-ink-500 num select-all" id="phoneText"></span>
+                <span class="text-ink-500 num select-all" id="phoneText2"></span>
+                <button id="copyPhone" class="text-sm font-bold text-heart hover:underline">Copy number</button>
+              </div>
+            </dd>
+          </div>
+        </dl>
+      </div>
+
+      <form id="bookForm" class="relative min-w-0 bg-white rounded-[24px] p-5 sm:p-8 shadow-lift grid gap-4" novalidate>
+        <h3 class="font-display text-2xl font-semibold">Request an appointment</h3>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <label class="grid gap-1.5 text-sm font-bold" for="fName">Full name
+            <input id="fName" name="name" required autocomplete="name" class="font-medium text-base border border-mist-200 rounded-xl px-4 py-3 focus:border-ink outline-none" placeholder="Your name">
+          </label>
+          <label class="grid gap-1.5 text-sm font-bold" for="fPhone">Phone
+            <input id="fPhone" name="phone" required type="tel" inputmode="tel" autocomplete="tel" class="font-medium text-base border border-mist-200 rounded-xl px-4 py-3 focus:border-ink outline-none" placeholder="10-digit mobile">
+          </label>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <label class="grid gap-1.5 text-sm font-bold" for="fReason">Reason for visit
+            <select id="fReason" name="reason" class="font-medium text-base border border-mist-200 rounded-xl px-4 py-3 bg-white focus:border-ink outline-none">
+              <option>Heart check-up</option>
+              <option>Chest pain or breathlessness</option>
+              <option>Blood pressure follow-up</option>
+              <option>Echo or ECG review</option>
+              <option>Second opinion</option>
+              <option>Cardiac rehab (Beat N Breath)</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label class="grid gap-1.5 text-sm font-bold" for="fDate">Preferred date
+            <input id="fDate" name="date" type="date" class="font-medium text-base border border-mist-200 rounded-xl px-4 py-3 focus:border-ink outline-none">
+          </label>
+        </div>
+        <label class="grid gap-1.5 text-sm font-bold" for="fNote">Anything the doctor should know (optional)
+          <textarea id="fNote" name="note" rows="3" class="font-medium text-base border border-mist-200 rounded-xl px-4 py-3 focus:border-ink outline-none resize-y" placeholder="Symptoms, current medicines, past reports"></textarea>
+        </label>
+        <p id="formError" class="text-sm font-bold text-heart" hidden></p>
+        <!-- Honeypot: hidden from people, bots fill it and get ignored -->
+        <div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><label for="fWebsite">Website</label><input id="fWebsite" name="website" tabindex="-1" autocomplete="off"></div>
+        <button id="bookBtn" type="submit" class="mt-1 inline-flex justify-center items-center gap-2 bg-heart hover:bg-heart-600 disabled:opacity-60 text-white font-bold px-6 py-3.5 rounded-full transition-colors">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>
+          Submit request
+        </button>
+        <p class="text-[13px] text-ink-500">For a medical emergency, go to the nearest hospital or call 108.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-ink text-[#C7D3E2]">
+  <div class="gutter">
+    <div class="wrap py-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="lg:col-span-2 min-w-0">
+        <div class="font-display text-2xl font-semibold text-white">Dr. Akif Ahamad Baig</div>
+        <p class="mt-2 max-w-[44ch]">Consultant Interventional Cardiologist. Founder of Aaira Heart &amp; Polyclinic and InfuMedz Medical and Education Zone LLP.</p>
+        <div id="footSocial" class="mt-5 flex flex-wrap gap-2"></div>
+      </div>
+      <div>
+        <div class="font-bold text-white">Platforms</div>
+        <ul class="mt-3 grid gap-2">
+          <li><a class="hover:text-white" href="https://infusionmedz.com" target="_blank" rel="noopener">InfuMedz</a></li>
+          <li><a class="hover:text-white" href="https://clinova.org.in" target="_blank" rel="noopener">Clinova</a></li>
+          <li><a class="hover:text-white" href="https://inforedz.com" target="_blank" rel="noopener">Inforedz</a></li>
+          <li><a class="hover:text-white" href="#venture-beatnbreath">Beat N Breath</a></li>
+          <li><a class="hover:text-white" href="#venture-reserz">RESERZ</a></li>
+          <li><a class="hover:text-white" href="#venture-infomedz">InfoMedz (coming soon)</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-bold text-white">Page</div>
+        <ul class="mt-3 grid gap-2">
+          <li><a class="hover:text-white" href="#about">About</a></li>
+          <li><a class="hover:text-white" href="#teaching">Teaching</a></li>
+          <li><a class="hover:text-white" href="#team">Team</a></li>
+          <li><a class="hover:text-white" href="#contact">Book a visit</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap border-t border-white/10 py-6 pb-28 lg:pb-6 flex flex-col sm:flex-row justify-between gap-2 text-sm">
+      <span>© <span id="year">2026</span> Dr. Akif Ahamad Baig</span>
+      <span>Built by InfuTechz</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile action bar -->
+<div class="mobile-bar lg:hidden fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur border-t border-mist-200 pt-2.5 grid grid-cols-3 gap-2">
+  <a id="barCall" href="#" class="flex flex-col items-center gap-0.5 text-[12px] font-bold text-ink py-1.5 rounded-xl hover:bg-mist">
+    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>Call
+  </a>
+  <a href="#contact" class="flex flex-col items-center gap-0.5 text-[12px] font-bold text-white bg-heart py-1.5 rounded-xl">
+    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>Book
+  </a>
+  <a id="barMap" href="#" target="_blank" rel="noopener" class="flex flex-col items-center gap-0.5 text-[12px] font-bold text-ink py-1.5 rounded-xl hover:bg-mist">
+    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Directions
+  </a>
+</div>
+
+<!-- Venture full page -->
+<div id="vpage" tabindex="-1" class="vpage outline-none fixed inset-0 z-[75] bg-white overflow-y-auto overscroll-contain" hidden role="dialog" aria-modal="true" aria-labelledby="vpTitle">
+  <div id="vpInner"></div>
+</div>
+
+<!-- Video player -->
+<div id="vmodal" class="fixed inset-0 z-[78]" style="background:rgba(8,24,43,.96)" hidden role="dialog" aria-modal="true" aria-labelledby="vmTitle">
+  <div class="absolute inset-0 flex flex-col items-center justify-center gap-4 p-4 sm:p-10" style="padding-top: calc(72px + env(safe-area-inset-top, 0px)); padding-bottom: calc(24px + env(safe-area-inset-bottom, 0px));">
+    <div id="vmFrame" class="w-full rounded-2xl overflow-hidden bg-black shadow-2xl"></div>
+    <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-white text-center">
+      <span id="vmTitle" class="font-bold"></span>
+      <a id="vmOpen" href="#" target="_blank" rel="noopener" class="text-sm font-bold text-[#F3A6B2] hover:underline"></a>
+    </div>
+  </div>
+  <button id="vmClose" class="absolute w-12 h-12 grid place-items-center rounded-full bg-white/10 text-white hover:bg-white/20" style="top: calc(16px + env(safe-area-inset-top, 0px)); right: calc(16px + env(safe-area-inset-right, 0px));" aria-label="Close video">
+    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+  </button>
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="fixed inset-0 z-[70] bg-ink/95" hidden role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <div class="absolute inset-0 flex items-center justify-center p-4 sm:p-10">
+    <img id="lbImg" src="" alt="" class="max-h-full max-w-full rounded-2xl object-contain">
+  </div>
+  <p id="lbCap" class="absolute bottom-6 left-0 right-0 text-center text-white font-semibold px-6" style="bottom: calc(24px + env(safe-area-inset-bottom, 0px));"></p>
+  <button id="lbClose" class="absolute w-12 h-12 grid place-items-center rounded-full bg-white/10 text-white hover:bg-white/20" style="top: calc(16px + env(safe-area-inset-top, 0px)); right: calc(16px + env(safe-area-inset-right, 0px));" aria-label="Close photo viewer">
+    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+  </button>
+  <button id="lbPrev" class="absolute top-1/2 -translate-y-1/2 w-12 h-12 grid place-items-center rounded-full bg-white/10 text-white hover:bg-white/20" style="left: calc(12px + env(safe-area-inset-left, 0px));" aria-label="Previous photo">
+    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 6l-6 6 6 6"/></svg>
+  </button>
+  <button id="lbNext" class="absolute top-1/2 -translate-y-1/2 w-12 h-12 grid place-items-center rounded-full bg-white/10 text-white hover:bg-white/20" style="right: calc(12px + env(safe-area-inset-right, 0px));" aria-label="Next photo">
+    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg>
+  </button>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
