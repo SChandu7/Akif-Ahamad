@@ -66,6 +66,20 @@ The form POSTs JSON to `CONFIG.bookingApi` in `main.js`. Django code is in `back
 the form offers WhatsApp instead. Open the site over http (localhost or hosting),
 not by double-clicking index.html: YouTube blocks embeds on file:// (Error 153).
 
+## SEO (drakifacademy.com)
+
+Already in the site: SEO title and description, canonical URL, Open Graph share image,
+schema.org data (WebSite, Person, MedicalClinic, ventures, FAQ), visible FAQ, sitemap.xml,
+robots.txt, favicons, web manifest, CNAME, and compiled CSS for speed.
+
+Rebuild CSS after changing any Tailwind class in index.html or main.js:
+
+```
+npx tailwindcss@3.4.17 -c build/tailwind.config.js -i build/input.css -o assets/css/site.css --minify
+```
+
+Do not upload the `backend/` or `build/` folders to the public site.
+
 ## Deploy (GitHub Pages)
 
 ```

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /backend/
+
+Sitemap: https://drakifacademy.com/sitemap.xml
