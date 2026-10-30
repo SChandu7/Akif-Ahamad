@@ -229,7 +229,7 @@ const TALKS = [
 // TODO: team members below (except the two doctors) are placeholders. Replace names, roles and add photos.
 // To add a photo, set photo: 'assets/img/your-file.webp'
 const TEAM = [
-  { name: 'Dr. M.A Sameena Farheen', role: 'Consultant Physician', group: 'clinic' },
+  { name: 'Dr. M.A Sameena Farheen', role: 'Consultant Physician, MD (General Medicine)', group: 'clinic' },
   { name: 'Dr. Sheikh Reshma', role: 'Pulmonologist', group: 'clinic' },
   { name: 'Ravi Teja K.', role: 'Clinic Manager', group: 'clinic' },
   { name: 'Sana Fatima', role: 'Senior Staff Nurse', group: 'clinic' },
@@ -245,13 +245,14 @@ const TEAM = [
 
 // Clinic photos: put files in assets/img/ and add lines like
 //   { src: 'assets/img/aaira-reception.webp', w: 1200, h: 900, cap: 'Reception, Aaira Heart & Polyclinic' },
+// To remove a photo from the gallery: delete its line (or put // in front of it).
 const GALLERY = [
-  { src: 'assets/img/hero-portrait.webp', w: 900, h: 1125, cap: 'Studio portrait' },
-  { src: 'assets/img/clinic-arms.webp', w: 900, h: 1488, cap: 'Ready for the cath lab' },
-  { src: 'assets/img/mumbai.webp', w: 800, h: 1200, cap: 'Mumbai, during his DNB years' },
-  { src: 'assets/img/og-banner.webp', w: 1200, h: 900, cap: 'Consultant Interventional Cardiologist' },
-  { src: 'assets/img/clinic-smile.webp', w: 900, h: 1488, cap: 'At the clinic' },
-  { src: 'assets/img/full-length.webp', w: 900, h: 1440, cap: 'Between rounds' },
+  { src: 'assets/img/hero-portrait.webp', w: 900, h: 1125, cap: 'Studio portrait' },                  // 1
+  { src: 'assets/img/clinic-arms.webp', w: 900, h: 1488, cap: 'Ready for the cath lab' },            // 2
+  { src: 'assets/img/mumbai.webp', w: 800, h: 1200, cap: 'Mumbai, during his DNB years' },           // 3
+  { src: 'assets/img/og-banner.webp', w: 1200, h: 900, cap: 'Consultant Interventional Cardiologist' }, // 4
+  { src: 'assets/img/clinic-smile.webp', w: 900, h: 1488, cap: 'At the clinic' },                    // 5
+  { src: 'assets/img/full-length.webp', w: 900, h: 1440, cap: 'Between rounds' },                    // 6
 ];
 
 /* ---------------------------------------------------------------------
